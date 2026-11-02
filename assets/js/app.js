@@ -1,9 +1,9 @@
-// Reduce animation cost automatically on low-powered or data-saving devices.
+// Keep Aurora Glow, but automatically simplify motion on low-powered or data-saving devices.
 (() => {const connection=navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-const limited=(typeof navigator.deviceMemory==='number'&&navigator.deviceMemory<=4)
- || (typeof navigator.hardwareConcurrency==='number'&&navigator.hardwareConcurrency<=4)
- || Boolean(connection&&connection.saveData);
-if(limited)document.documentElement.classList.add('lite-effects');})();
+const limited = (typeof navigator.deviceMemory==='number' && navigator.deviceMemory<=4)
+ || (typeof navigator.hardwareConcurrency==='number' && navigator.hardwareConcurrency<=4)
+ || Boolean(connection && connection.saveData);
+if (limited) document.documentElement.classList.add('lite-effects');})();
 
 (() => {
   'use strict';

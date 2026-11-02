@@ -58,7 +58,7 @@ document.documentElement.classList.add('has-js');
 <div class="actions"><a class="btn" href="#config">Собрать конфигурацию <span class="arrow">↗</span></a><a class="link-line" href="#result">Увидеть разницу ↓</a></div>
 </div>
 <div class="hero-art" id="heroArt">
-<picture><source media="(max-width: 640px)" srcset="assets/images/hero-mobile.webp" type="image/webp"/><img alt="Спортивный автомобиль в боковом свете — визуальная концепция" class="hero-car" decoding="async" fetchpriority="high" height="680" id="heroCar" src="assets/images/hero.webp" width="1250"/></picture>
+<picture><source media="(max-width: 640px)" srcset="assets/images/hero-mobile.webp" type="image/webp"/><img alt="Мастер обрабатывает серый семейный кроссовер в детейлинг-студии — иллюстрация" class="hero-car" decoding="async" fetchpriority="high" height="680" id="heroCar" src="assets/images/hero.webp" width="1250"/></picture>
 <div aria-hidden="true" class="img-fallback">NOIR / AUTO LAB</div>
 <div class="art-corner mono"><span>Surface study / 001</span><span>PPF · CERAMIC · DETAILING</span></div><div aria-hidden="true" class="scanline"></div>
 <div class="art-bottom"><strong>Precision is a feeling.</strong><small>PROTECTION, WITHOUT<br/>THE VISUAL NOISE.</small></div>
@@ -69,8 +69,8 @@ document.documentElement.classList.add('has-js');
 <div class="section-head reveal"><div><div class="section-index mono">02 / Surface study</div><h2>Разницу видно.<br/><em>Задачу — чувствуешь.</em></h2></div><p class="section-intro">Защита помогает сохранить внешний вид между визитами в детейлинг. Выберите степень сравнения — ползунок показывает стилизованную визуализацию.</p></div>
 <div class="comparison reveal">
 <div><div class="compare-box" id="compareBox" style="--split:50%">
-<img alt="Иллюстративное изображение автомобиля, вариант после ухода" class="after" decoding="async" height="570" loading="lazy" src="assets/images/compare/finish.webp" width="980"/>
-<div class="before-clip" id="beforeClip"><img alt="" class="before" decoding="async" height="570" loading="lazy" src="assets/images/compare/finish.webp" width="980"/></div>
+<img alt="Крупный план гидрофобного эффекта на кузове — художественная иллюстрация" class="after" decoding="async" height="570" loading="lazy" src="assets/images/compare/finish.webp" width="980"/>
+<div class="before-clip" id="beforeClip"><img alt="" class="before" decoding="async" height="570" loading="lazy" src="assets/images/compare/before.webp" width="980"/></div>
 <span class="compare-label left">Визуализация A</span><span class="compare-label right">Визуализация B</span><div aria-hidden="true" class="compare-knob">↔</div>
 <input aria-describedby="compareHelp" aria-label="Сравнение художественных изображений: сдвиньте ползунок" class="compare-control" id="compareControl" max="96" min="4" type="range" value="50"/>
 <div class="compare-foot"><span>Illustrative study</span><span>Move to compare</span></div>
@@ -79,28 +79,40 @@ document.documentElement.classList.add('has-js');
 </div>
 </section>
 <section aria-labelledby="worksHeading" class="section works" id="works">
-<div class="section-head reveal"><div><div class="section-index mono">03 / Selected concepts</div><h2 id="worksHeading">Работы.<br/><em>В деталях.</em></h2></div><p class="section-intro">Наброски будущего портфолио: разные автомобили, задачи и варианты защиты. Листайте свайпом или стрелками. Нажмите на работу, чтобы открыть фото на весь экран.</p></div>
+<div class="section-head reveal"><div><div class="section-index mono">03 / Selected concepts</div><h2 id="worksHeading">Работы.<br/><em>В деталях.</em></h2></div><p class="section-intro">Сценарии будущего портфолио: повседневные автомобили и мастера во время реальных по типу операций. Листайте свайпом или стрелками. Нажмите на работу, чтобы открыть фото на весь экран.</p></div>
 <div class="slider-topline reveal"><span class="mono slider-eyebrow">PROJECT STUDIES / 01—04</span><div class="slider-actions"><span aria-live="off" class="slider-count mono" id="worksCount">01 / 04</span><button aria-label="Предыдущая работа" class="slider-arrow" data-slider-prev="worksTrack" type="button">←</button><button aria-label="Следующая работа" class="slider-arrow" data-slider-next="worksTrack" type="button">→</button></div></div>
 <div aria-label="Галерея примеров работ: листайте горизонтально или используйте стрелки клавиатуры" class="editorial-track work-track reveal" data-slider-track="" id="worksTrack" tabindex="0">
-<article aria-label="Пример 1 из 4: PPF / STUDY 01" class="work-card" data-slide="">
-<div class="work-visual work-tone-1"><img alt="Художественная визуализация защиты передней части автомобиля" decoding="async" height="620" loading="lazy" src="assets/images/works/ppf.webp" width="920"><span aria-hidden="true" class="work-visual-fallback">NOIR / 01</span><span class="work-visual-index mono">CONCEPT / 01</span><span class="work-visual-type mono">Дорожные зоны риска</span></img></div>
-<div class="work-details"><div><span class="work-kicker mono">PPF / STUDY 01</span><h3>Защита передней части</h3><p>Иллюстративный сценарий с PPF на капоте, бампере и зеркалах.</p></div><span aria-hidden="true" class="work-card-arrow">↗</span></div>
+<article aria-label="Пример 1 из 4: повседневный городской автомобиль" class="work-card" data-slide="">
+<div class="work-visual work-tone-1"><img alt="Мастер наклеивает прозрачную PPF-плёнку на переднюю часть синего автомобиля" decoding="async" height="620" loading="lazy" src="assets/images/works/ppf.webp" width="920"><span aria-hidden="true" class="work-visual-fallback">NOIR / 01</span><span class="work-visual-index mono">CONCEPT / 01</span><span class="work-visual-type mono">Дорожные зоны риска</span></img></div>
+<div class="work-details"><div><span class="work-kicker mono">ГОРОДСКОЙ АВТОМОБИЛЬ</span><h3>Защита передней части</h3><p>Иллюстрация нанесения защитной плёнки на переднюю часть автомобиля.</p></div><span aria-hidden="true" class="work-card-arrow">↗</span></div>
 <button aria-label="Открыть эту работу на весь экран" class="work-open" data-open-work="" type="button"><span class="sr-only">Открыть работу на весь экран</span></button></article>
-<article aria-label="Пример 2 из 4: CERAMIC / STUDY 02" class="work-card" data-slide="">
-<div class="work-visual work-tone-2"><img alt="Художественная визуализация керамики и полировки кузова" decoding="async" height="620" loading="lazy" src="assets/images/works/ceramic.webp" width="920"><span aria-hidden="true" class="work-visual-fallback">NOIR / 02</span><span class="work-visual-index mono">CONCEPT / 02</span><span class="work-visual-type mono">Глубина цвета и уход</span></img></div>
-<div class="work-details"><div><span class="work-kicker mono">CERAMIC / STUDY 02</span><h3>Детейлинг и керамика</h3><p>Концепт деликатной подготовки поверхности и керамической защиты.</p></div><span aria-hidden="true" class="work-card-arrow">↗</span></div>
+<article aria-label="Пример 2 из 4: семейный седан" class="work-card" data-slide="">
+<div class="work-visual work-tone-2"><img alt="Мастер выполняет машинную полировку светлого семейного седана" decoding="async" height="620" loading="lazy" src="assets/images/works/ceramic.webp" width="920"><span aria-hidden="true" class="work-visual-fallback">NOIR / 02</span><span class="work-visual-index mono">CONCEPT / 02</span><span class="work-visual-type mono">Глубина цвета и уход</span></img></div>
+<div class="work-details"><div><span class="work-kicker mono">СЕМЕЙНЫЙ СЕДАН</span><h3>Детейлинг и керамика</h3><p>Иллюстрация подготовки кузова к нанесению защитного состава.</p></div><span aria-hidden="true" class="work-card-arrow">↗</span></div>
 <button aria-label="Открыть эту работу на весь экран" class="work-open" data-open-work="" type="button"><span class="sr-only">Открыть работу на весь экран</span></button></article>
-<article aria-label="Пример 3 из 4: FULL CARE / STUDY 03" class="work-card" data-slide="">
-<div class="work-visual work-tone-3"><img alt="Художественная визуализация комплексного ухода за кузовом" decoding="async" height="620" loading="lazy" src="assets/images/works/complex.webp" width="920"><span aria-hidden="true" class="work-visual-fallback">NOIR / 03</span><span class="work-visual-index mono">CONCEPT / 03</span><span class="work-visual-type mono">Чистота каждой линии</span></img></div>
-<div class="work-details"><div><span class="work-kicker mono">FULL CARE / STUDY 03</span><h3>Комплексный подход</h3><p>Сценарий сочетания согласованных зон PPF и ухода за кузовом.</p></div><span aria-hidden="true" class="work-card-arrow">↗</span></div>
+<article aria-label="Пример 3 из 4: кроссовер" class="work-card" data-slide="">
+<div class="work-visual work-tone-3"><img alt="Мастер полирует кузов повседневного кроссовера" decoding="async" height="620" loading="lazy" src="assets/images/works/complex.webp" width="920"><span aria-hidden="true" class="work-visual-fallback">NOIR / 03</span><span class="work-visual-index mono">CONCEPT / 03</span><span class="work-visual-type mono">Чистота каждой линии</span></img></div>
+<div class="work-details"><div><span class="work-kicker mono">КРОССОВЕР</span><h3>Комплексный подход</h3><p>Иллюстрация ручной и машинной обработки кузова кроссовера.</p></div><span aria-hidden="true" class="work-card-arrow">↗</span></div>
 <button aria-label="Открыть эту работу на весь экран" class="work-open" data-open-work="" type="button"><span class="sr-only">Открыть работу на весь экран</span></button></article>
-<article aria-label="Пример 4 из 4: DETAIL / STUDY 04" class="work-card" data-slide="">
-<div class="work-visual work-tone-4"><img alt="Художественная визуализация внимания к деталям кузова" decoding="async" height="620" loading="lazy" src="assets/images/works/details.webp" width="920"/><span aria-hidden="true" class="work-visual-fallback">NOIR / 04</span><span class="work-visual-index mono">CONCEPT / 04</span><span class="work-visual-type mono">Поверхности под контролем</span></div>
-<div class="work-details"><div><span class="work-kicker mono">DETAIL / STUDY 04</span><h3>Акцент на деталях</h3><p>Демонстрация индивидуального плана работ для сложной геометрии.</p></div><span aria-hidden="true" class="work-card-arrow">↗</span></div>
+<article aria-label="Пример 4 из 4: семейный автомобиль" class="work-card" data-slide="">
+<div class="work-visual work-tone-4"><img alt="Мастер проводит паровую очистку салона семейного автомобиля" decoding="async" height="620" loading="lazy" src="assets/images/works/details.webp" width="920"/><span aria-hidden="true" class="work-visual-fallback">NOIR / 04</span><span class="work-visual-index mono">CONCEPT / 04</span><span class="work-visual-type mono">Поверхности под контролем</span></div>
+<div class="work-details"><div><span class="work-kicker mono">СЕМЕЙНЫЙ АВТОМОБИЛЬ</span><h3>Уход за салоном</h3><p>Иллюстрация профессиональной очистки сидений и труднодоступных зон.</p></div><span aria-hidden="true" class="work-card-arrow">↗</span></div>
 <button aria-label="Открыть эту работу на весь экран" class="work-open" data-open-work="" type="button"><span class="sr-only">Открыть работу на весь экран</span></button></article>
 </div>
 <p class="showcase-disclaimer">Демонстрационное портфолио: описания проектов вымышлены, фотографии иллюстративные. Не представляют выполненные заказы NOIR AUTO LAB.</p>
 </section>
+
+<section class="section everyday-vehicles" aria-labelledby="everydayHeading" id="vehicles">
+  <div class="section-head reveal"><div><div class="section-index mono">03B / Everyday cars</div><h2 id="everydayHeading">Работаем с тем,<br><em>на чём ездят каждый день.</em></h2></div><p class="section-intro">Городские седаны, семейные кроссоверы, хэтчбеки и коммерческий транспорт. Четыре иллюстративных примера для будущего портфолио.</p></div>
+  <div class="everyday-grid">
+    <figure class="everyday-tile"><img src="assets/images/works/sedan.webp" alt="Тёмный повседневный седан в студии" loading="lazy" decoding="async" width="405" height="174"><figcaption><strong>Седан</strong><span>ЛКП, стёкла, защита зон риска</span></figcaption></figure>
+    <figure class="everyday-tile"><img src="assets/images/works/crossover.webp" alt="Светлый семейный кроссовер в студии" loading="lazy" decoding="async" width="365" height="174"><figcaption><strong>Кроссовер</strong><span>Комплексный детейлинг</span></figcaption></figure>
+    <figure class="everyday-tile"><img src="assets/images/works/hatchback.webp" alt="Синий городской хэтчбек в студии" loading="lazy" decoding="async" width="374" height="174"><figcaption><strong>Хэтчбек</strong><span>Полировка, уход и покрытия</span></figcaption></figure>
+    <figure class="everyday-tile"><img src="assets/images/works/minivan.webp" alt="Белый повседневный фургон в студии" loading="lazy" decoding="async" width="375" height="174"><figcaption><strong>Фургон</strong><span>Очистка и защита рабочих поверхностей</span></figcaption></figure>
+  </div>
+  <p class="showcase-disclaimer">Фотографии — сгенерированные иллюстрации, не реальные заказы или подтверждённые результаты.</p>
+</section>
+
 <section class="section packages" id="packages">
 <div class="section-head reveal"><div><div class="section-index mono">04 / Protection profiles</div><h2>Два уровня.<br/><em>Ваш выбор.</em></h2></div><p class="section-intro">ESSENTIAL — сфокусированная защита зон риска. SIGNATURE — комплексный сценарий для тех, кто хочет проработать больше поверхностей.</p></div>
 <div class="package-grid reveal">
