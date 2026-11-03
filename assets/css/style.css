@@ -745,3 +745,7 @@ html.motion-ready .hero .hero-copy .actions {
 .compare-box { aspect-ratio: 1672 / 941; min-height: 0; background: #0b0d0e; }
 .compare-box .before,.compare-box .after { filter: none !important; object-fit: cover; object-position: center center; }
 @media (max-width: 640px) { .compare-box { aspect-ratio: 1672 / 941; min-height: 0; } }
+
+/* Portfolio photos are authored in 9:16. Keep the full portrait composition in cards. */
+.works .work-visual{height:auto;aspect-ratio:9/16}
+.works .work-visual img{object-fit:cover;object-position:center center}
