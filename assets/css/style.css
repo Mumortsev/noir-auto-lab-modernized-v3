@@ -725,3 +725,23 @@ body.work-lightbox-open{overflow:hidden}
 :root[data-theme="dark"] .hero .hero-copy h1 { font-family: Inter, Arial, Helvetica, sans-serif; font-weight: 500; }
 :root[data-theme="light"] .hero .hero-copy h1 em,
 :root[data-theme="dark"] .hero .hero-copy h1 em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
+
+/* Prevent entry-animation transforms from shifting Hero text during theme changes. */
+html.motion-ready .hero .hero-copy .eyebrow,
+html.motion-ready .hero .hero-copy h1,
+html.motion-ready .hero .hero-copy .hero-desc,
+html.motion-ready .hero .hero-copy .actions {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+/* Keep light-mode Hero copy legible over the brighter, user-approved photograph. */
+:root[data-theme="light"] .hero .hero-desc {
+  color: #f3f5f2;
+}
+
+/* BMW before/after: full-width matched 16:9 photos, no artificial filters. */
+.compare-box { aspect-ratio: 1672 / 941; min-height: 0; background: #0b0d0e; }
+.compare-box .before,.compare-box .after { filter: none !important; object-fit: cover; object-position: center center; }
+@media (max-width: 640px) { .compare-box { aspect-ratio: 1672 / 941; min-height: 0; } }
