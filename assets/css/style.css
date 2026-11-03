@@ -579,3 +579,143 @@ body.work-lightbox-open{overflow:hidden}
 :root[data-theme="dark"] .everyday-tile span{color:#b3b7aa}
 @media(max-width:900px){.everyday-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.everyday-grid{gap:10px}.everyday-tile figcaption{padding:12px}.everyday-tile strong{font-size:11px}.everyday-tile span{font-size:10px}}
+
+
+/* === NOIR HERO: exact user-supplied scene pairs, full-bleed desktop/mobile === */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  isolation: isolate;
+  width: 100vw;
+  max-width: none;
+  min-height: calc(100svh - 78px);
+  margin-inline: calc(50% - 50vw);
+  padding: clamp(32px, 5.5vw, 94px) var(--pad);
+  overflow: hidden;
+  background: #0d0f11;
+}
+/* Keep Aurora Glow in the rest of the site; do not tint the photographic light-switch. */
+.hero::before, .hero::after { content: none !important; }
+.hero-visual, .hero-scene, .hero-scene img, .hero-scrim {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.hero-visual { z-index: 0; overflow: hidden; pointer-events: none; }
+.hero-scene { overflow: hidden; }
+.hero-scene img {
+  object-fit: cover;
+  object-position: center center;
+  filter: none !important;
+  transform: none !important;
+  animation: none !important;
+}
+.hero-scene-dark { opacity: 1; }
+.hero-scene-light {
+  opacity: 0;
+  transition: opacity .9s cubic-bezier(.24,.67,.28,1);
+  will-change: opacity;
+}
+:root[data-theme="light"] .hero-scene-light { opacity: 1; }
+:root[data-theme="dark"] .hero-scene-light { opacity: 0; }
+:root[data-theme="light"] .hero { background: #2a2d30; }
+.hero-scrim {
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(4,7,8,.66) 0%, rgba(4,7,8,.48) 22%, rgba(4,7,8,.1) 46%, transparent 68%);
+}
+:root[data-theme="light"] .hero-scrim {
+  background: linear-gradient(90deg, rgba(4,7,8,.59) 0%, rgba(4,7,8,.40) 24%, rgba(4,7,8,.06) 49%, transparent 70%);
+}
+.hero .hero-copy {
+  position: relative;
+  z-index: 2;
+  flex: 0 1 min(48%, 660px);
+  min-width: 0;
+  align-self: center;
+  padding: 0;
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+.hero .hero-copy h1 {
+  font-size: clamp(48px, 5.8vw, 82px);
+  line-height: .99;
+  letter-spacing: -.072em;
+  margin: clamp(20px,3vh,35px) 0 22px;
+  color: #f6f6f0;
+  overflow-wrap: normal;
+}
+.hero .hero-copy h1 em { color: #d0f17b; }
+.hero .eyebrow, :root[data-theme="light"] .hero .eyebrow { color: #d0f17b; }
+/* Typography geometry must never depend on the selected theme. */
+.hero .hero-desc { color: #e0e4dd; max-width: 395px; font-size: clamp(13px,1.1vw,16px); }
+.hero .link-line, :root[data-theme="light"] .hero .link-line { color: #f5f5ec; }
+.hero .btn, :root[data-theme="light"] .hero .btn { background: #d0f17b; color: #111713; border-color: #d0f17b; }
+@media (min-width: 1800px) {
+  .hero .hero-copy { margin-left: max(0px, calc((100vw - 1800px) / 2)); }
+}
+@media (max-width: 900px) and (min-width: 641px) {
+  .hero .hero-copy { flex-basis: 55%; }
+  .hero .hero-copy h1 { font-size: clamp(46px,6vw,69px); }
+  .hero-scrim { background: linear-gradient(90deg,rgba(3,5,7,.76),rgba(3,5,7,.42) 38%,transparent 78%); }
+}
+@media (max-width: 640px) {
+  .hero {
+    width: 100vw;
+    min-height: calc(100svh - 66px);
+    max-height: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: clamp(38px, 7.5svh, 72px) clamp(20px,6vw,32px) 24px;
+    gap: 0;
+  }
+  .hero .hero-copy {
+    flex: 1 1 auto;
+    max-width: 100%;
+    align-self: flex-start;
+    text-align: left;
+  }
+  .hero .eyebrow { font-size: 9px; letter-spacing: .07em; }
+  .hero .hero-copy h1 {
+    margin: clamp(18px,3svh,28px) 0 16px;
+    font-size: clamp(42px, 10.6vw, 64px);
+    line-height: 1.02;
+    letter-spacing: -.066em;
+  }
+  .hero .hero-desc { max-width: 335px; margin-bottom: 22px; font-size: 12px; line-height: 1.55; }
+  .hero .actions { gap: 10px 15px; }
+  .hero .btn { min-height: 45px; padding: 0 13px; gap: 12px; font-size: 9px; }
+  .hero .link-line { padding: 8px 0; font-size: 9px; }
+  .hero-scrim {
+    background: linear-gradient(180deg, rgba(4,6,8,.47) 0%,rgba(4,6,8,.25) 26%,rgba(4,6,8,.06) 42%,transparent 59%);
+  }
+  :root[data-theme="light"] .hero-scrim {
+    background: linear-gradient(180deg, rgba(4,6,8,.53) 0%,rgba(4,6,8,.27) 25%,rgba(4,6,8,.05) 42%,transparent 58%);
+  }
+  .hero-scene img { object-position: center center; }
+}
+@media (max-width: 640px) and (max-height: 700px) {
+  .hero { padding-top: 24px; }
+  .hero .hero-copy h1 { font-size: clamp(37px,9.6vw,49px); margin: 14px 0 12px; }
+  .hero .hero-desc { line-height: 1.45; margin-bottom: 14px; }
+  .hero .btn { min-height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-scene-light { transition: none !important; will-change: auto !important; }
+}
+
+@media (min-width: 641px) and (max-width: 900px) and (orientation: portrait) {
+  .hero { align-items: flex-start; padding-top: clamp(65px,9svh,110px); }
+  .hero .hero-copy { align-self: flex-start; flex-basis: min(76%, 540px); }
+  .hero .hero-copy h1 { font-size: clamp(53px,7vw,70px); }
+  .hero-scrim,
+  :root[data-theme="light"] .hero-scrim {
+    background: linear-gradient(180deg,rgba(4,6,8,.65) 0%,rgba(4,6,8,.28) 35%,transparent 66%);
+  }
+}

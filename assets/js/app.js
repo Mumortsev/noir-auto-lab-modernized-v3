@@ -56,10 +56,8 @@ if (limited) document.documentElement.classList.add('lite-effects');})();
   window.addEventListener('keydown', e => { if (e.key === 'Escape' && mobileNav.classList.contains('open')) setMenu(false, true); });
   mobileMenuBreakpoint.addEventListener('change', () => { if (!mobileMenuBreakpoint.matches) setMenu(false, true); });
 
-  // Graceful hero image fallback.
-  const heroArt = $('#heroArt'), heroCar = $('#heroCar');
-  heroCar.addEventListener('error', () => heroArt.classList.add('failed'));
-  if (heroCar.complete && heroCar.naturalWidth === 0) heroArt.classList.add('failed');
+  // Hero has two responsive, perfectly overlaid photo layers; CSS fades light over dark.
+  // Theme state is applied to <html> by applyTheme(); no geometry changes during switching.
 
   // Before/after visual comparison: keyboard accessible native range input.
   const compareControl = $('#compareControl');

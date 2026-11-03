@@ -12,8 +12,6 @@
 <meta content="NOIR AUTO LAB — форма под защитой" property="og:title"/>
 <meta content="PPF, керамика и детейлинг. Узнайте о вариантах защиты кузова и соберите предварительную конфигурацию." property="og:description"/>
 <meta content="dark light" name="color-scheme"/>
-<link as="image" href="assets/images/hero.webp" media="(min-width:641px)" rel="preload"/>
-<link as="image" href="assets/images/hero-mobile.webp" media="(max-width:640px)" rel="preload"/>
 <link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml"/>
 <meta content="noindex,nofollow" name="robots"/>
 <meta content="https://mumortsev.github.io/noir-auto-lab-modernized-v3/assets/images/og-cover.webp" property="og:image"/>
@@ -29,6 +27,15 @@ document.documentElement.classList.add('has-js');
   const media = window.matchMedia('(prefers-color-scheme: dark)');
   document.documentElement.dataset.themeMode = mode;
   document.documentElement.dataset.theme = mode === 'system' ? (media.matches ? 'dark' : 'light') : mode;
+  // Load the exact first-frame photo before CSS/JS rendering; respect saved theme and viewport.
+  const viewport = window.matchMedia('(max-width: 640px), (max-width: 900px) and (orientation: portrait)').matches ? 'mobile' : 'desktop';
+  const lighting = document.documentElement.dataset.theme;
+  const preload = document.createElement('link');
+  preload.rel = 'preload';
+  preload.as = 'image';
+  preload.type = 'image/webp';
+  preload.href = `assets/images/hero-${viewport}-${lighting}.webp${viewport === 'mobile' ? '?v=2' : ''}`;
+  document.head.appendChild(preload);
 })();
 </script>
 <link href="assets/css/style.css" rel="stylesheet"/>
@@ -50,20 +57,24 @@ document.documentElement.classList.add('has-js');
 </header>
 <nav aria-hidden="true" aria-label="Мобильная навигация" class="mobile-nav" id="mobileNav" inert=""><a href="#result">Сравнение</a><a href="#works">Работы</a><a href="#packages">Пакеты</a><a href="#method">Подход</a><a href="#reviews">Отзывы</a><a href="#config">Конфигуратор</a><a href="#contact">Оставить заявку</a></nav>
 <main class="wrap" id="top">
-<section class="hero">
+<section class="hero" aria-label="NOIR AUTO LAB — профессиональный детейлинг">
+<div class="hero-visual" id="heroArt" aria-hidden="true">
+  <picture class="hero-scene hero-scene-dark">
+    <source media="(max-width: 640px), (max-width: 900px) and (orientation: portrait)" srcset="assets/images/hero-mobile-dark.webp?v=2" type="image/webp"/>
+    <img src="assets/images/hero-desktop-dark.webp" alt="" decoding="async" fetchpriority="high" width="1536" height="864"/>
+  </picture>
+  <picture class="hero-scene hero-scene-light">
+    <source media="(max-width: 640px), (max-width: 900px) and (orientation: portrait)" srcset="assets/images/hero-mobile-light.webp?v=2" type="image/webp"/>
+    <img src="assets/images/hero-desktop-light.webp" alt="" decoding="async" width="1536" height="864"/>
+  </picture>
+</div>
+<div class="hero-scrim" aria-hidden="true"></div>
 <div class="hero-copy">
-<div class="eyebrow mono">Surface, considered / 01</div>
-<h1>Форма.<br/><em>Под защитой.</em></h1>
-<p class="hero-desc">PPF, керамика и детейлинг с уважением к каждой линии кузова. Помогаем подобрать объём защиты с учётом состояния кузова и условий эксплуатации.</p>
-<div class="actions"><a class="btn" href="#config">Собрать конфигурацию <span class="arrow">↗</span></a><a class="link-line" href="#result">Увидеть разницу ↓</a></div>
+  <div class="eyebrow mono">NOIR AUTO LAB / DETAILING STUDIO</div>
+  <h1>Форма.<br/><em>Под защитой.</em></h1>
+  <p class="hero-desc">PPF, керамика и детейлинг с уважением к каждой линии кузова. Индивидуальный уход за вашим автомобилем.</p>
+  <div class="actions"><a class="btn" href="#config">Собрать конфигурацию <span class="arrow">↗</span></a><a class="link-line" href="#result">Увидеть разницу ↓</a></div>
 </div>
-<div class="hero-art" id="heroArt">
-<picture><source media="(max-width: 640px)" srcset="assets/images/hero-mobile.webp" type="image/webp"/><img alt="Мастер обрабатывает серый семейный кроссовер в детейлинг-студии — иллюстрация" class="hero-car" decoding="async" fetchpriority="high" height="680" id="heroCar" src="assets/images/hero.webp" width="1250"/></picture>
-<div aria-hidden="true" class="img-fallback">NOIR / AUTO LAB</div>
-<div class="art-corner mono"><span>Surface study / 001</span><span>PPF · CERAMIC · DETAILING</span></div><div aria-hidden="true" class="scanline"></div>
-<div class="art-bottom"><strong>Precision is a feeling.</strong><small>PROTECTION, WITHOUT<br/>THE VISUAL NOISE.</small></div>
-</div>
-<div class="hero-foot"><div class="hero-note mono">Сперва диагностика. Затем — точное решение.</div><div class="hero-metrics"><div class="metric"><b>01:1</b><span>Индивидуальный<br/>план работ</span></div><div class="metric"><b>360°</b><span>Внимание к<br/>деталям кузова</span></div><div class="metric"><b>0</b><span>Неподтверждённых<br/>обещаний</span></div></div></div>
 </section>
 <section class="section studio" id="result">
 <div class="section-head reveal"><div><div class="section-index mono">02 / Surface study</div><h2>Разницу видно.<br/><em>Задачу — чувствуешь.</em></h2></div><p class="section-intro">Защита помогает сохранить внешний вид между визитами в детейлинг. Выберите степень сравнения — ползунок показывает стилизованную визуализацию.</p></div>
