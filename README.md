@@ -14,3 +14,9 @@
 
 ## Иллюстрации повседневных автомобилей
 Изображения сгенерированы для демонстрации разных услуг и типов машин. Это не реальные фотографии выполненных работ; для полноэкранных демонстраций рекомендуется заменить низкоразрешённые фрагменты индивидуальными фотографиями высокого разрешения.
+
+## Hero desktop (2026-11-03)
+- 1672×941 base composition, same pixel coordinates dark/light (lighting transformation only).
+- `assets/images/hero-desktop-{dark,light}.webp` updated, no viewport crop/zoom animation.
+- Previous pixel-aligned mobile files retained unchanged.
+- Identical heading fonts, sizes and button positions across themes.

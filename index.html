@@ -34,7 +34,7 @@ document.documentElement.classList.add('has-js');
   preload.rel = 'preload';
   preload.as = 'image';
   preload.type = 'image/webp';
-  preload.href = `assets/images/hero-${viewport}-${lighting}.webp${viewport === 'mobile' ? '?v=2' : ''}`;
+  preload.href = `assets/images/hero-${viewport}-${lighting}.webp${viewport === 'mobile' ? '?v=2' : '?v=3'}`;
   document.head.appendChild(preload);
 })();
 </script>
@@ -61,11 +61,11 @@ document.documentElement.classList.add('has-js');
 <div class="hero-visual" id="heroArt" aria-hidden="true">
   <picture class="hero-scene hero-scene-dark">
     <source media="(max-width: 640px), (max-width: 900px) and (orientation: portrait)" srcset="assets/images/hero-mobile-dark.webp?v=2" type="image/webp"/>
-    <img src="assets/images/hero-desktop-dark.webp" alt="" decoding="async" fetchpriority="high" width="1536" height="864"/>
+    <img src="assets/images/hero-desktop-dark.webp?v=3" alt="" decoding="async" fetchpriority="high" width="1536" height="864"/>
   </picture>
   <picture class="hero-scene hero-scene-light">
     <source media="(max-width: 640px), (max-width: 900px) and (orientation: portrait)" srcset="assets/images/hero-mobile-light.webp?v=2" type="image/webp"/>
-    <img src="assets/images/hero-desktop-light.webp" alt="" decoding="async" width="1536" height="864"/>
+    <img src="assets/images/hero-desktop-light.webp?v=3" alt="" decoding="async" width="1536" height="864"/>
   </picture>
 </div>
 <div class="hero-scrim" aria-hidden="true"></div>

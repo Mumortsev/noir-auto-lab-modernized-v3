@@ -719,3 +719,9 @@ body.work-lightbox-open{overflow:hidden}
     background: linear-gradient(180deg,rgba(4,6,8,.65) 0%,rgba(4,6,8,.28) 35%,transparent 66%);
   }
 }
+
+/* Hero typography: pixel-stable across theme changes on every viewport. */
+:root[data-theme="light"] .hero .hero-copy h1,
+:root[data-theme="dark"] .hero .hero-copy h1 { font-family: Inter, Arial, Helvetica, sans-serif; font-weight: 500; }
+:root[data-theme="light"] .hero .hero-copy h1 em,
+:root[data-theme="dark"] .hero .hero-copy h1 em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
