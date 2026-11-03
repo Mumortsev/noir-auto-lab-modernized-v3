@@ -543,15 +543,7 @@ body.work-lightbox-open{overflow:hidden}
 .estimate-tools .tool-reset{grid-column:1/-1;border-color:rgba(255,255,255,.2);color:#bec6b2}
 .form-demo-button{color:#27341c;border-color:#637943;width:100%;margin-top:8px}
 .form-demo-button:hover{background:#344627;color:#f3f6ee}
-.project-showcase{background:#151a15;color:#f4f5ec;padding:clamp(35px,5vw,75px) var(--pad);border-top:1px solid rgba(208,241,123,.19)}
-.project-showcase-inner{display:grid;grid-template-columns:1.1fr 1fr auto;gap:32px;align-items:center;border:1px solid rgba(208,241,123,.3);border-radius:12px;padding:clamp(24px,3vw,40px);background:radial-gradient(circle at 78% 30%,rgba(126,176,75,.14),transparent 49%)}
-.project-showcase .mono{color:#d0f17b}
-.project-showcase h2{font-size:clamp(27px,3.2vw,49px);line-height:1.07;letter-spacing:-.05em;margin:12px 0 0}
-.project-showcase p{font-size:13px;line-height:1.75;color:#c0c8b9;max-width:450px}
-.project-showcase .btn{white-space:nowrap}
 .print-only{display:none}
-@media(max-width:1000px){.project-showcase-inner{grid-template-columns:1fr 1fr}.project-showcase .btn{grid-column:1/-1;justify-content:center}}
-@media(max-width:640px){.project-showcase-inner{grid-template-columns:1fr;gap:15px}.project-showcase .btn{grid-column:auto}.hero-car{object-position:52% 50%}.estimate-tools{grid-template-columns:1fr 1fr}}
 /* Preserve Aurora Glow while reducing the number of moving, blurred layers. */
 @media(max-width:900px){.hero::after,.packages::before{animation:none!important;filter:none!important;will-change:auto!important}.hero::before{filter:blur(8px);animation-duration:22s!important;opacity:.58}}
 @media(max-width:480px){.hero::before{filter:blur(5px);opacity:.48;animation-duration:27s!important}.hero::after{opacity:.3}}
