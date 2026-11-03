@@ -562,23 +562,6 @@ body.work-lightbox-open{overflow:hidden}
 @media print{body{background:#fff!important;color:#101610!important}.header,.mobile-nav,.hero,.studio,.works,.packages,.method,.reviews,.config,.contact,.footer,.project-showcase,.toast,.work-lightbox{display:none!important}.print-only{display:block!important;max-width:750px;margin:45px auto;padding:10px 22px;font:16px/1.7 Arial,sans-serif}.print-only h1{font-size:31px;letter-spacing:-1px}.print-only strong{font-size:25px}.print-only hr{border:0;border-top:1px solid #aaa;margin:26px 0}.print-only small{display:block;color:#555}}
 
 /* Everyday cars: realistic work mix, while keeping the original NOIR design system. */
-.everyday-vehicles{background:var(--paper);color:#1b1d18}
-.everyday-vehicles .section-index{color:#607b2e}
-.everyday-vehicles h2 em{color:#617b35}
-.everyday-vehicles .section-intro{color:#666b5f}
-.everyday-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.everyday-tile{margin:0;border:1px solid rgba(26,32,24,.13);background:#f4f4ec;min-width:0;overflow:hidden}
-.everyday-tile img{width:100%;aspect-ratio:4/3;height:auto;object-fit:cover;object-position:center;filter:saturate(.87) contrast(1.03)}
-.everyday-tile figcaption{padding:18px 17px 20px;display:flex;flex-direction:column;gap:7px}
-.everyday-tile strong{font-size:13px;letter-spacing:.01em}
-.everyday-tile span{font-size:11px;line-height:1.5;color:#62695d}
-:root[data-theme="dark"] .everyday-vehicles{background:#191c18;color:#e8e7df}
-:root[data-theme="dark"] .everyday-vehicles .section-index,:root[data-theme="dark"] .everyday-vehicles h2 em{color:#d0f17b}
-:root[data-theme="dark"] .everyday-vehicles .section-intro{color:#b3b7aa}
-:root[data-theme="dark"] .everyday-tile{background:#222820;border-color:rgba(255,255,255,.15)}
-:root[data-theme="dark"] .everyday-tile span{color:#b3b7aa}
-@media(max-width:900px){.everyday-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:480px){.everyday-grid{gap:10px}.everyday-tile figcaption{padding:12px}.everyday-tile strong{font-size:11px}.everyday-tile span{font-size:10px}}
 
 
 /* === NOIR HERO: exact user-supplied scene pairs, full-bleed desktop/mobile === */
@@ -749,3 +732,34 @@ html.motion-ready .hero .hero-copy .actions {
 /* Portfolio photos are authored in 9:16. Keep the full portrait composition in cards. */
 .works .work-visual{height:auto;aspect-ratio:9/16}
 .works .work-visual img{object-fit:cover;object-position:center center}
+
+/* === Visual release hardening: preserve existing approved image assets === */
+/* Keep package actions on one baseline despite unequal service lists. */
+@media (min-width: 641px) {
+  .package-grid { align-items: stretch; }
+  .package-grid > .package { display: flex; flex-direction: column; height: 100%; }
+  .package-grid > .package .includes { flex: 1 0 auto; }
+  .package-grid > .package .package-select { margin-top: auto; align-self: flex-start; }
+}
+@media (max-width: 640px) {
+  .package-grid > .package { display: flex; flex-direction: column; }
+  .package-grid > .package .package-select { align-self: flex-start; }
+}
+/* Avoid mobile portrait media source being selected in desktop-mode browser view. */
+.hero-visual, .hero-scene { min-width: 0; min-height: 0; }
+.hero-scene img { width: 100%; height: 100%; object-fit: cover; }
+/* Contrast improvements for muted text in both visual themes. */
+:root[data-theme="light"] .fineprint,
+:root[data-theme="light"] .demo-note,
+:root[data-theme="light"] .showcase-disclaimer,
+:root[data-theme="light"] .form-legal { color: #4c5448; }
+:root[data-theme="dark"] .fineprint,
+:root[data-theme="dark"] .demo-note,
+:root[data-theme="dark"] .showcase-disclaimer,
+:root[data-theme="dark"] .form-legal { color: #c6ccbe; }
+:root[data-theme="light"] .package-tag,
+:root[data-theme="light"] .package-sub,
+:root[data-theme="light"] .price span { color: #4c5448; }
+:root[data-theme="dark"] .package-tag,
+:root[data-theme="dark"] .package-sub,
+:root[data-theme="dark"] .price span { color: #c6ccbe; }
